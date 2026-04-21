@@ -73,10 +73,13 @@ body {
 /* 🔢 Número */
 .numero {
     position: absolute;
-    left: -10px;
     top: -10px;
-    font-size: 55px;
-    color: white;
+    left: -10px;
+}
+
+.card-camisa:nth-child(odd) .numero {
+    left: auto;
+    right: -10px;
 }
 
 /* 📏 Linha */
@@ -154,4 +157,50 @@ body {
 
 .botao:hover {
     background: #d11a1a;
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .linha {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-polaroid {
+        width: 80%;
+        transform: rotate(0deg);
+        margin-bottom: 10px;
+    }
+
+    .img-polaroid video {
+        width: 100%;
+    }
+
+    .info {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .votos {
+        font-size: 24px;
+    }
+
+    .nomes {
+        font-size: 14px;
+    }
+
+    .botao {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .numero {
+        font-size: 28px;
+    }
 }
