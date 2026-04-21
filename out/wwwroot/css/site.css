@@ -1,0 +1,157 @@
+/* 🔤 Fonte */
+@font-face {
+    font-family: 'Jingleberry';
+    src: url('/fonts/Jingleberry.otf') format('opentype');
+    font-display: swap;
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 100%;
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .linha {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-polaroid {
+        width: 80%;
+    }
+
+    .info {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+/* 🌽 Geral */
+body {
+    background: linear-gradient(#e7d8a5, #f0c27b);
+    font-family: 'Jingleberry', Arial, sans-serif;
+}
+
+/* 🖼️ Topo e rodapé */
+.topo {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.rodape {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* 📦 Container */
+.container {
+    width: 100%;
+    max-width: 900px; /* controla largura no PC */
+    margin: auto;
+    background: #f4a46b;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+/* 📝 Descrição */
+.descricao {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #3b1f0f;
+}
+
+/* 🧱 Card */
+.card-camisa {
+    position: relative;
+    margin: 30px 0;
+}
+
+/* 🔢 Número */
+.numero {
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    font-size: 55px;
+    color: white;
+}
+
+/* 📏 Linha */
+.linha {
+    display: flex;
+    align-items: center;
+}
+
+/* 🔄 Alternância */
+.card-camisa:nth-child(even) .linha {
+    flex-direction: row-reverse;
+}
+
+/* 🖼️ Polaroid */
+.img-polaroid {
+    transform: rotate(-5deg);
+    background: white;
+    padding: 12px;
+    width: 200px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+.img-polaroid:hover {
+    transform: scale(1.05) rotate(-3deg);
+    transition: 0.3s;
+}
+
+.card-camisa:nth-child(even) .img-polaroid {
+    transform: rotate(5deg);
+}
+
+.img-polaroid video {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* 📊 Info */
+.info {
+    background: linear-gradient(#ff8c42, #ffb347);
+    border-radius: 20px;
+    padding: 25px;
+    margin-left: 25px;
+    flex: 1;
+}
+
+/* 🔥 Votos */
+.votos {
+    font-size: 34px;
+    color: white;
+}
+
+/* 👥 Nomes */
+.nomes {
+    background: rgba(255,255,255,0.25);
+    padding: 10px;
+    border-radius: 12px;
+    margin-top: 10px;
+    font-size: 12px;
+    color: white;
+    max-height: 60px;
+    overflow-y: auto;
+}
+
+/* 🔴 Botão */
+.botao {
+    background: #a31212;
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 12px 25px;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background: #d11a1a;
+}

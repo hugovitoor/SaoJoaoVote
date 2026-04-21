@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "SaoJoaoVote/1.0.0": {
+        "runtime": {
+          "SaoJoaoVote.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SaoJoaoVote/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

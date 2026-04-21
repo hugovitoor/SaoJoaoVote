@@ -1,4 +1,10 @@
+using SaoJoaoVote.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlite("Data Source=votos.db"));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

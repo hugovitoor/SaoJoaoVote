@@ -1,0 +1,7 @@
+C:\Users\fvito\SaoJoaoVote\out\SaoJoaoVote.exe
+C:\Users\fvito\SaoJoaoVote\out\appsettings.Development.json
+C:\Users\fvito\SaoJoaoVote\out\appsettings.json
+C:\Users\fvito\SaoJoaoVote\out\SaoJoaoVote.dll
+C:\Users\fvito\SaoJoaoVote\out\SaoJoaoVote.deps.json
+C:\Users\fvito\SaoJoaoVote\out\SaoJoaoVote.runtimeconfig.json
+C:\Users\fvito\SaoJoaoVote\out\SaoJoaoVote.pdb
