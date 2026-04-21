@@ -126,7 +126,7 @@ C:\Users\fvito\SaoJoaoVote\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
 C:\Users\fvito\SaoJoaoVote\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\fvito\SaoJoaoVote\obj\Debug\net10.0\scopedcss\bundle\SaoJoaoVote.styles.css
 C:\Users\fvito\SaoJoaoVote\obj\Debug\net10.0\scopedcss\projectbundle\SaoJoaoVote.bundle.scp.css
-C:\Users\fvito\SaoJoaoVote\obj\Debug\net10.0\compressed\mijyr5mmkj-{0}-0r5g3a3eu1-0r5g3a3eu1.gz
+C:\Users\fvito\SaoJoaoVote\obj\Debug\net10.0\compressed\mijyr5mmkj-{0}-zunzg93eoy-zunzg93eoy.gz
 C:\Users\fvito\SaoJoaoVote\obj\Debug\net10.0\compressed\ddto8twmai-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\fvito\SaoJoaoVote\obj\Debug\net10.0\compressed\fx3dqyv2tz-{0}-msbwmvjtne-msbwmvjtne.gz
 C:\Users\fvito\SaoJoaoVote\obj\Debug\net10.0\compressed\i3v0c7w667-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
