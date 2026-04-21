@@ -1,0 +1,98 @@
+﻿@model List<SaoJoaoVote.Models.Camisa>
+
+<img src="/img/topo.png" class="topo" />
+
+<div class="container">
+
+<p class="descricao">
+A votação servirá para definir qual será a camisa usada no dia 23/04, em nosso encontro junino. Vale ressaltar que os modelos abaixo podem sofrer alterações conforme as sugestões do grupo. Cada pessoa tem direito a um voto. Se o seu filho(a) ou outra pessoa permitir que você vote por ela, esse voto também será contabilizado! Mobilize a torcida e boa sorte para a sua camisa favorita!
+</p>
+
+<div class="atualizacoes">
+    <div id="votosAtualizado">Votos atualizados em: --</div>
+    <div>Site atualizado em: @ViewBag.SiteAtualizado</div>
+</div>
+
+@{
+    int pos = 1;
+}
+
+@foreach (var camisa in Model)
+{
+    <div class="card-camisa">
+
+        <div class="numero">#@pos</div>
+
+        <div class="linha">
+            
+            <div class="img-polaroid">
+                <video muted loop autoplay>
+                    <source src="@camisa.Midia" type="video/webm">
+                </video>
+            </div>
+
+            <div class="info">
+                <div class="votos">
+                    <span id="votos-@camisa.Id">0</span> VOTOS!
+                </div>
+
+                <div id="nomes-@camisa.Id" class="nomes">
+                    ninguém votou ainda...
+                </div>
+
+                <button class="botao" onclick="votar(@camisa.Id)">
+                    VOTE EM MIM!
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    pos++;
+}
+
+</div>
+
+<img src="/img/rodape.png" class="rodape" />
+
+<script>
+function votar(id) {
+    let nome = prompt("Digite seu nome:");
+
+    if (!nome) return;
+
+    fetch(`/Home/Votar?id=${id}&nome=${encodeURIComponent(nome)}`, {
+        method: 'POST'
+    })
+    .then(() => location.reload());
+}
+
+function atualizarVotos() {
+    fetch('/Home/GetVotos')
+    .then(res => res.json())
+    .then(data => {
+
+        let votos = data.votos;
+
+        for (let id in votos) {
+            let lista = votos[id];
+
+            let votosEl = document.getElementById("votos-" + id);
+            if (votosEl) votosEl.innerText = lista.length;
+
+            let nomesEl = document.getElementById("nomes-" + id);
+            if (nomesEl) {
+                nomesEl.innerText = lista.length > 0 
+                    ? lista.join(", ") 
+                    : "ninguém votou ainda...";
+            }
+        }
+
+        document.getElementById("votosAtualizado").innerText =
+            "Votos atualizados em: " + data.atualizado;
+    });
+}
+
+setInterval(atualizarVotos, 2000);
+atualizarVotos();
+</script>
