@@ -162,35 +162,49 @@ body {
 }
 
 @media (max-width: 768px) {
-
     .container {
         max-width: 100%;
         padding: 10px;
+        box-sizing: border-box; /* Garante que o padding não quebre a largura */
     }
 
-    .linha {
-        flex-direction: column;
+    /* Força a coluna em todos os cards e reseta a inversão do PC */
+    .linha, 
+    .card-camisa:nth-child(even) .linha {
+        flex-direction: column !important;
+        display: flex;
         align-items: center;
     }
 
     .img-polaroid {
         width: 80%;
-        transform: rotate(0deg);
-        margin-bottom: 10px;
-    }
-
-    .img-polaroid video {
-        width: 100%;
+        transform: rotate(0deg) !important; /* Remove rotação no mobile para evitar cortes */
+        margin-bottom: 20px; /* Cria o espaço entre a foto e o bloco laranja */
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 
     .info {
-        margin-left: 0;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
         width: 100%;
         text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* Ajuste do número para não ficar grudado na borda */
+    .numero {
+        position: relative; /* Muda de absolute para relative ou ajusta o z-index */
+        font-size: 40px;
+        left: 0 !important;
+        right: 0 !important;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 10px;
     }
 
     .votos {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .nomes {
@@ -199,10 +213,7 @@ body {
 
     .botao {
         width: 100%;
-        font-size: 16px;
-    }
-
-    .numero {
-        font-size: 28px;
+        font-size: 18px;
+        padding: 15px;
     }
 }
